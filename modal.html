@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">  <!-- Define el lenguaje-->
+
+<head>
+  <meta charset="utf-8">  <!-- Define la codificación de los caracteres especiales-->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> <!-- Configura la página para que sea responsive-->
+  <title>Modal_Bootstrap</title> <!-- Título del documento-->
+  <meta name="description" content="Andrea Guaje"> <!-- Configura la página para que sea responsive-->
+ 
+
+   <!-- Vincular sweet alert-->
+
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   <!-- CSS de Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><!-- JS de Bootstrap (opcional, para componentes interactivos) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body  style="background-color: #f8f9fa;">
+
+<!-- FORMULARIO --------------------------------------------------------------------------------------------------------------------------->
+
+<section class="mt-5 mx-auto w-75 fw-semibold" style="background-color: transparent; border: none; box-shadow: none;"> <!-- Título el contenedor / fw-semibold (font weith) --> 
+
+    <div class="titulo text-center" >
+        <h1>Aplicación de Notas</h1>
+    </div>
+
+    <form class="colum1">
+        <div class="row">
+
+            <div class="col-md-12 mb-3">
+            <input type="text" class="form-control" id="Actividad" placeholder="Actividad" required> <!-- placeholder: en la casilla incluye el texto -->        
+            </div>
+
+            <div class="col-md-12 mb-3">
+              <textarea class="form-control" id="Descripción" placeholder="Descripción de la nota" rows="2" required></textarea> <!-- placeholder: en la casilla incluye el texto -->        
+            </div>
+
+            <div class="col-md-12 mb-3">
+                            
+                                
+              <select id="Categoria" class="form-select">
+                <option value="">Seleccione una categoría</option>
+                <option value="Trabajo">Trabajo</option>
+                <option value="Personal">Personal</option>
+                <option value="Estudio">Estudio</option>
+              </select>
+        
+            </div>
+
+            <div class="d-flex flex-fill"> 
+              <!-- Botón 1 -->
+              <button type="submit" class="btn btn-primary text-white flex-fill me-2">Agregar nota</button>    <!-- me: Margin end -->
+            </div>
+        </div>
+      </form>
+
+      
+      <!--Contenedor de tarjetas de las notas ingresadas -->
+      <h3 class="mt-5">Notas</h3>
+      <div id="notasContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5"></div>
+
+       <!--Botón que elimina todas las notas -->
+      <div class="text-end my-3">
+        <button class="btn btn-danger" onclick="eliminarTodasLasNotas()">Eliminar todas las notas</button>
+      </div>
+
+  </section>  
+            
+ 
+  
+</body>
+
+
+<script src="./js/notas_v2.js"></script>
